@@ -21,4 +21,15 @@ sido_name = response['response']['body']['items'][1]['sidoName']
 pm10 = response['response']['body']['items'][1]['pm10Value']
 station_name = response['response']['body']['items'][1]['stationName']
 
-print(f'{sido_name}의 미세먼지 농도는 {pm10}입니다. (측정소: {station_name})')
+# print(f'{sido_name}의 미세먼지 농도는 {pm10}입니다. (측정소: {station_name})')
+
+# 5. 자신에게 텔레그램 메시지 전송 (sendMessage)
+
+token = ''
+api_url = f'https://api.telegram.org/bot{token}'
+chat_id = ''
+
+text = (f'{sido_name}의 미세먼지 농도는 {pm10}입니다. (측정소: {station_name})')
+message_url = f'{api_url}/sendMessage?chat_id={chat_id}&text={text}'
+
+requests.get(message_url)
