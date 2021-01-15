@@ -1,4 +1,5 @@
 # TIL
 
-* Today I Learned
-* 매일 배운 것을 정리 & 기록합니다.
+> Today I Learned
+>
+> 오늘 배운 것을 기록하고 정리합니다.
